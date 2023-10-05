@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuentra un Distribuidor</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="formulario.css">
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/fd6428d3fa.js" crossorigin="anonymous"></script>
+    <a href="https://api.whatsapp.com/send?phone=+51987654321" class="btn-wsp" target="_blank">
+        <i class="fa fa-whatsapp icono"></i>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=+51987654321" class="btn-wsp1" target="_blank">
+        <i class="fa-solid fa-motorcycle"></i>
+      </a>
+      <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
+      <header class="header_nav">
+        <div class="logo_nav"><img src="imagenes/logo.png" alt=""></div>
+        <input type="checkbox" id="togle_nav">
+        <label for="togle_nav"><img src="imagenes/menu.svg" class="menu"></label>
+        <nav class="navigation_nav">
+          <ul>
+            <li class="menu-item grupo-piaggio"><a href="index.html">GRUPO PIAGGIO</a></li>
+            <li class="menu-item grupo-piaggio active"><a href="index.html">INICIO</a></li>
+            <li class="menu-item grupo-piaggio"><a href="modelos.html">NUESTROS MODELOS</a>
+              <ul>
+                <li id="modelos"><a href="BEBERLY400.html">PIAGGIO BEVERLY 400</a></li>
+                <li id="modelos"><a href="BEVERLYS400.html">PIAGGIO BEVERLY S 400</a></li>
+                <li id="modelos"><a href="MP3400.html">PIAGGIO MP3 400</a></li>
+                <li id="modelos"><a href="MP3SPORT400.html">PIAGGIO MP3 SPORT 400</a></li>
+                <li id="modelos"><a href="MP33300HPE.html">PIAGGIO MP3 300 HPE</a></li>
+                <li id="modelos"><a href="MP3SPORT300.html">PIAGGIO MP3 SPORT 300</a></li>
+    
+                <!--li id="modelos"><a href="m1.html">PIAGGIO BEVERLY</a></!--li>
+                <li id="modelos"><a href="m2.html">PIAGGIO MP3 300 LT - HPE SPORT ES</a></li>
+                <li-- id="modelos"><a href="m3.html">PIAGGIO MP3 530 LT - HPE SPORT ES</a></li-->
+                <li id="modelos"><a href="m4.html">PIAGGIO 1 ACTIVE</a></li>
+                <li id="modelos"><a href="m5.html">PIAGGIO MYMOOVER</a></li>
+              </ul>
+            </li>
+            <li class="menu-item grupo-piaggio"><a href="distibuidor.html">ENCUENTRA UN DISTRIBUIDOR</a></li>
+            <li class="menu-item grupo-piaggio"><a href="posventa.html">POSTVENTA</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <section class="modelo_encabezado">
+            <div class="cabecera_modelo">
+                <div class="cabecera_modelo_parte1">
+                    <h5>Un diseño italiano
+                        para ti</h5>
+                </div>
+                <div class="cabecera_modelo_parte2">
+                    <h1>PIAGGIO BEVERLY 300
+                    </h1>
+                </div>
+                <div class="cabecera_modelo_parte3">
+                    <h2>Solicita en la Pre venta</h2>
+                </div>
+            </div>
+        </section>
+        <section class="modelo_imagenes">
+            <div>
+                <img src="imagenes/7_BEVERLY 300/BEVERLY300_1.png" alt="">
+            </div>
+            <div class="colores">
+                <div class="color naranja" data-image-src="imagenes/7_BEVERLY 300/BEVERLY300_1.png">
+                    <div class="color-container">
+                        <div class="circle"></div>
+                        <div class="color-info">
+                            <div class="color-name">NARANJA</div>
+                            <div class="price">$13.650.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="modelo_formulario">
+            <div class="modelo_formulario_contenedor">
+                <div class="contennn_for">
+                    <div class="formulario_conten1">
+                        <div style="display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;">
+                            <div class="formulario_conten_parte1">
+                                <h5>CONTÁCTANOS</h5>
+                                <h1>COTIZA AQUÍ TU PIAGGIO</h1>
+                            </div>
+                        </div>
+                        <div class="formulario_data">
+                            <div class="container_form">
+                                <form>
+                                    <input type="text" placeholder="Nombres y Apellidos" required>
+                                    <input type="email" placeholder="Correo Electrónico" required>
+                                    <input type="tel" placeholder="Celular" required>
+                                    <label>¿Cómo deseas ser contactado?*</label>
+                                    <br>
+                                    <div class="checkbox-container">
+                                        <div><label for="telefono">Teléfono</label>
+                                            <input type="checkbox" id="telefono" name="contacto" value="telefono">
+                                        </div>
+                                        <div>
+                                            <label for="whatsapp">WhatsApp</label>
+                                            <input type="checkbox" id="whatsapp" name="contacto" value="whatsapp">
+                                        </div>
+                                    </div>
+                                    <label style="text-align: left;">Modelo Piaggio*:</label>
+                                    <select name="modelo">
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="BEVERLY">BEVERLY</option>
+                                        <option value="MP3 300 HPE">MP3 300 HPE</option>
+                                        <option value="MY MOOVER">MY MOOVER</option>
+                                        <option value="Active 1">Active 1</option>
+                                        <option value="MP3 530 SPORT">MP3 530 SPORT</option>
+
+                                    </select>
+                                    <label style="text-align: left;">Ciudad*:</label>
+                                    <select name="ciudad">
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="Barranquilla">LIMA</option>
+                                        <option value="Bogota">CALLAO</option>
+                                    </select>
+                                    <textarea placeholder="Observaciones"></textarea>
+                                    <input type="checkbox" id="terminos" name="terminos" required>
+                                    <label class="wpcf7-list-item-label">Acepta el
+                                        <a href="https://loscoches.com/wp-content/uploads/2019/07/politica-de-proteccion-de-datos-personales-v4.pdf"
+                                            target="_blank" rel="noopener" style="color: #0371AD ;">Tratamiento de Datos
+                                            y Politica de
+                                            Privacidad.</a></label>
+                                    <br>
+                                    <input type="submit" value="Enviar">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formulario_conten2">
+                        <div class="formulario_conten_parte2">
+                            <h5>PIAGGIO BEVERLY</h5>
+                            <h1>EL TOP DE LA CATEGORÍA DE RUEDA ALTA</h1>
+                        </div>
+                        <div style="padding-top: 29px;">
+                            Más de dos décadas después del lanzamiento en 2001 de la primera generación del
+                            Piaggio Beverly, el último modelo recibe un cambio de imagen pero conserva el
+                            carácter deportivo y el diseño elegante que han dado forma a la historia de la
+                            movilidad urbana. En sus versiones de 300 cc y 400 cc, tanto el elegante Beverly
+                            como su homólogo más deportivo, el Beverly S, combinan las cualidades dinámicas
+                            y el agarre de un vehículo de ruedas altas con la exuberancia y el confort de un
+                            GT.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="descripcion_modelo1_parte1">
+            <div class="contenedor1_modelo1">
+                <div class="imagen_contenedor1_modelo1">
+                    <img src="imagenes/m1_p1.jpg">
+                </div>
+                <div class="info_contenedor1_modelo1">
+                    <h5>ENCUENTRA TU ESTILO</h5>
+                    <h1>DISEÑO ITALIANO</h1>
+                    <div class="contenedor_info_contenedor1_modelo1">
+                        Con su carácter urbano, elegancia y rendimiento y fiabilidad de
+                        conducción, el Beverly es ideal para viajes más largos fuera del
+                        contexto urbano. Las nuevas características, como una cómoda posición de
+                        conducción y un amplio compartimento debajo del asiento que puede
+                        contener dos cascos, aseguran muchas emociones también fuera de la
+                        ciudad.
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor2_modelo1">
+                <div class="info_contenedor2_modelo1">
+                    <h5>ENCUENTRA TU ESTILO</h5>
+                    <h1>CONTROL TOTAL</h1>
+                    <div class="contenedor_info_contenedor2_modelo1">
+                        El Piaggio Beverly 300 ABS-ASR viene con una función de control de tracción altamente
+                        sofisticada con sensores en cada rueda que monitorizan constantemente su velocidad y cualquier
+                        pérdida de adherencia en la rueda trasera. Si se detecta cualquier patinazo, el sistema ASR
+                        ajusta el par del eje trasero para que el scooter recupere la estabilidad.
+                    </div>
+                </div>
+                <div class="imagen_contenedor2_modelo1">
+                    <img src="imagenes/m1_p2.jpg">
+                </div>
+            </div>
+            <div class="contenedor1_modelo1">
+                <div class="imagen_contenedor1_modelo1">
+                    <img src="imagenes/m1_p3.jpg">
+                </div>
+                <div class="info_contenedor1_modelo1">
+                    <h5>ENCUENTRA TU ESTILO</h5>
+                    <h1>PRÁCTICO Y FUNCIONAL</h1>
+                    <div class="contenedor_info_contenedor1_modelo1">
+                        El Piaggio Beverly 300 ABS-ASR lleva un amplio espacio de almacenamiento con una guantera con
+                        cerradura en el contra escudo que se divide en dos apartados, uno de las cuales incluye una toma
+                        USB y el hueco debajo del asiento puede guardar hasta dos cascos abatibles. Este último puede
+                        abrirse con control remoto o presionando el botón situado en el manillar.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content_title_modelos">
+            <div class="title_modelos">
+                <div class="title_modelos_uno">
+                    <span class="title_modelos_1">ENCUENTRA TU ESTILO</span>
+                </div>
+                <div class="title_modelos_dos">
+                    <span class="title_modelos_2">ESPECIFICACIONES TÉCNICAS</span>
+                </div>
+            </div>
+            <a href="https://piaggio-colombia.com/wp-content/uploads/2023/07/Ficha-tecnica-Piaggio-Beverly-300-Los-coches-2023.pdf"
+                target="_blank"
+                class="elementor-button-link elementor-button elementor-size-md elementor-animation-skew" role="button">
+                <div class="boton2_modelos">
+                    <button class="boton_modelos_2">Descargar Ficha tecnica</button>
+                </div>
+            </a>
+        </section>
+
+        <section class="contenedor_especificaciones">
+            <div class="conten_colum">
+                <div class="especificaciones_colum1">
+                    <div class="column-content">
+                        <div class="imagen_colum">
+                            <img src="imagenes/motor-del-coche.png" alt="Motor del coche">
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>MOTOR</h2>
+                            <span class="info">PIAGGIO MONOCILÍDRICO CUATRO TIEMPOS.</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>CILINDRADA</h2>
+                            <span class="info">278 CC</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>DIÁMETRO X CARRERA</h2>
+                            <span class="info">75 MM X 63 MM</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>POTENCIA</h2>
+                            <span class="info">19 KW (25.5 HP) AT 8.000 RPM</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>PAR</h2>
+                            <span class="info">26 NM @ 6.250 RPM</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>DISTRIBUIDOR</h2>
+                            <span class="info">ÁRBOL DE LEVAS DE CUATRO VÁLVULAS</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>ALIMENTACIÓN</h2>
+                            <span class="info">INYECCIÓN ELECTRÓNICA</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>SISTEMA DE REFRIGERACIÓN</h2>
+                            <span class="info">LÍQUIDA</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>TRANSMISIÓN</h2>
+                            <span class="info">AUTOMÁTICA SECUENCIAL</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>CONSUMO</h2>
+                            <span class="info">30,3 KM / LITRO</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>EEMISIONES DE CO²</h2>
+                            <span class="info">78 G/KM</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>HOMOLOGACIÓN</h2>
+                            <span class="info">EURO 5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="especificaciones_colum1">
+                    <div class="column-content">
+                        <div class="imagen_colum">
+                            <img src="imagenes/moto.png" alt="Imagen de la moto">
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>SUSPENSIÓN DELANTERA</h2>
+                            <span class="info">HORQUILLA TELESCÓPICA HIDRÁULICA</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>SUSPENSIÓN TRASERA</h2>
+                            <span class="info">DOBLE AMORTIGUADOR CON 4 AJUSTES DE PRECARGA</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>FRENO DELANTERO</h2>
+                            <span class="info">DISCO DE 300-MM CON DOBLE PISTÓN Y PINZA FLOTANTE</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>FRENO TRASERO</h2>
+                            <span class="info">DISCO DE 240-MM CON DOBLE PISTÓN Y PINZA FLOTANTE</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>LARGO / ANCHO</h2>
+                            <span class="info">2.190MM/780MM</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>DISTANCIA ENTRE EJES</h2>
+                            <span class="info">1.535MM</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>ALTURA DEL ASIENTO</h2>
+                            <span class="info">790 MM</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>CAPACIDAD DEL DEPÓSITO DE COMBUSTIBLE</h2>
+                            <span class="info">12,5 LITROS</span>
+                        </div>
+                        <div class="column_descripcion">
+                            <h2>PESO</h2>
+                            <span class="info">173,5 KG (EN SECO) 183 KG (EN MARCHA)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="informacion_espec_final">
+            <div class="informacion_espec_final_texto">
+                Fotografías de referencia. Algunos accesorios hacen parte de la ambientación gráfica.<br>
+                *El precio puede estar sujeto a cambios sin previo aviso, consulte a su asesor.
+            </div>
+        </section>
+
+
+        <section class="lineas_azules"></section>
+
+        <section class="footer_piaggio">
+            <div class="footer_column">
+                <div class="logo_footer">
+                    <img src="imagenes/logo.png" alt="">
+                </div>
+                <div class="descripcion_footer">
+                    <span>Diseñamos tecnologías innovadoras, hermosas, <br>eficientes, inteligentes
+                        y sostenibles para reinventar la <br>movilidad para las generaciones futuras. Imaginamos <br>
+                        cómo se moverá
+                        la gente en el futuro, para anticipar sus <br> necesidades y aspiraciones.</span>
+                </div>
+                <div class="redes_footer">
+                    <span class="elementor-grid-item">
+                        <a class="" href="https://www.facebook.com/PiaggioColombiaOfficial" target="_blank">
+                            <img src="imagenes/facebook.png" alt="" style="height: 40px;">
+                        </a>
+                    </span>
+                    <span class="elementor-grid-item">
+                        <a class="" href="https://www.instagram.com/piaggiocolombiaoficial/" target="_blank">
+                            <img src="imagenes/instagram.png" alt="" style="height: 40px;">
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="footer_column">
+                <div class="titulo_footer"><span>NAVEGACIÓN</span></div>
+                <div class="lista_canales">
+                    <span> >> <a href="modelos.html">NUESTROS MODELOS</a></span>
+                    <br><br>
+                    <span> >> <a href="distibuidor.html">ENCUENTRA UN DISTRIBUIDOR</a></span>
+                </div>
+            </div>
+            <div class="footer_column">
+                <div class="titulo_footer"><span>CANALES DE SOPORTE</span></div>
+                <div class="lista_canales">
+                    <span> >> <a href="posventa.html">POSTVENTA</a></span>
+                    <br><br>
+                    <span> >> POLITICA DE PRIVACIDAD</span>
+                </div>
+        </section>
+
+        <section class="lineas_azules"></section>
+
+        <section class="footer_info">
+            <div class="footer_info_img">
+              <a href="https://loscoches.com/" target="_blank">
+                <img width="255" height="45" src="imagenes/Aquasport-logo.png"></a>
+            </div>
+            <div class="footer_info2">
+              <h4 class=""></h4>
+            </div>
+            <div class="footer_info3">
+              <h4 class="">Powered by <a href="https://www.ialab.co/" style="text-decoration: none; color: white;">
+                  ia{Lab}</a></h4>
+            </div>
+          </section>
+    </main>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8ii3nVGcoackbqMsMQ_MLOVVyCdXCzt4&libraries=places&callback=initMap"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

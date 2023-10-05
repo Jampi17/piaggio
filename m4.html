@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuentra un Distribuidor</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="formulario.css">
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/fd6428d3fa.js" crossorigin="anonymous"></script>
+    <a href="https://api.whatsapp.com/send?phone=+51987654321" class="btn-wsp" target="_blank">
+        <i class="fa fa-whatsapp icono"></i>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=+51987654321" class="btn-wsp1" target="_blank">
+        <i class="fa-solid fa-motorcycle"></i>
+      </a>
+      <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
+      <header class="header_nav">
+        <div class="logo_nav"><img src="imagenes/logo.png" alt=""></div>
+        <input type="checkbox" id="togle_nav">
+        <label for="togle_nav"><img src="imagenes/menu.svg" class="menu"></label>
+        <nav class="navigation_nav">
+          <ul>
+            <li class="menu-item grupo-piaggio"><a href="index.html">GRUPO PIAGGIO</a></li>
+            <li class="menu-item grupo-piaggio active"><a href="index.html">INICIO</a></li>
+            <li class="menu-item grupo-piaggio"><a href="modelos.html">NUESTROS MODELOS</a>
+              <ul>
+                <li id="modelos"><a href="BEBERLY400.html">PIAGGIO BEVERLY 400</a></li>
+                <li id="modelos"><a href="BEVERLYS400.html">PIAGGIO BEVERLY S 400</a></li>
+                <li id="modelos"><a href="MP3400.html">PIAGGIO MP3 400</a></li>
+                <li id="modelos"><a href="MP3SPORT400.html">PIAGGIO MP3 SPORT 400</a></li>
+                <li id="modelos"><a href="MP33300HPE.html">PIAGGIO MP3 300 HPE</a></li>
+                <li id="modelos"><a href="MP3SPORT300.html">PIAGGIO MP3 SPORT 300</a></li>
+    
+                <!--li id="modelos"><a href="m1.html">PIAGGIO BEVERLY</a></!--li>
+                <li id="modelos"><a href="m2.html">PIAGGIO MP3 300 LT - HPE SPORT ES</a></li>
+                <li-- id="modelos"><a href="m3.html">PIAGGIO MP3 530 LT - HPE SPORT ES</a></li-->
+                <li id="modelos"><a href="m4.html">PIAGGIO 1 ACTIVE</a></li>
+                <li id="modelos"><a href="m5.html">PIAGGIO MYMOOVER</a></li>
+              </ul>
+            </li>
+            <li class="menu-item grupo-piaggio"><a href="distibuidor.html">ENCUENTRA UN DISTRIBUIDOR</a></li>
+            <li class="menu-item grupo-piaggio"><a href="posventa.html">POSTVENTA</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <section class="modelo_encabezado">
+            <div class="cabecera_modelo">
+                <div class="cabecera_modelo_parte1">
+                    <h5>Un diseño italiano
+                        para ti</h5>
+                </div>
+                <div class="cabecera_modelo_parte2">
+                    <h1>PIAGGIO 1 ACTIVE</h1>
+                </div>
+                <div class="cabecera_modelo_parte3">
+                    <h2>Solicita en la Pre venta</h2>
+                </div>
+            </div>
+        </section>
+        <section class="modelo_imagenes">
+            <div>
+                <img src="imagenes/10_1ACTIVE/1ACTIVE_1.png" alt="">
+            </div>
+            <div class="colores">
+                <div class="color blanco" data-image-src="imagenes/10_1ACTIVE/1ACTIVE_1.png">
+                    <div class="color-container">
+                        <div class="circle"></div>
+                        <div class="color-info">
+                            <div class="color-name">BLANCO</div>
+                            <div class="price">Solicita en la Pre venta</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="modelo_formulario">
+            <div class="modelo_formulario_contenedor">
+                <div class="contennn_for">
+                    <div class="formulario_conten1">
+                        <div style="display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;">
+                            <div class="formulario_conten_parte1">
+                                <h5>CONTÁCTANOS</h5>
+                                <h1>COTIZA AQUÍ TU PIAGGIO</h1>
+                            </div>
+                        </div>
+                        <div class="formulario_data">
+                            <div class="container_form">
+                                <form>
+                                    <input type="text" placeholder="Nombres y Apellidos" required>
+                                    <input type="email" placeholder="Correo Electrónico" required>
+                                    <input type="tel" placeholder="Celular" required>
+                                    <label>¿Cómo deseas ser contactado?*</label>
+                                    <br>
+                                    <div class="checkbox-container">
+                                        <div><label for="telefono">Teléfono</label>
+                                            <input type="checkbox" id="telefono" name="contacto" value="telefono">
+                                        </div>
+                                        <div>
+                                            <label for="whatsapp">WhatsApp</label>
+                                            <input type="checkbox" id="whatsapp" name="contacto" value="whatsapp">
+                                        </div>
+                                    </div>
+                                    <label style="text-align: left;">Modelo Piaggio*:</label>
+                                    <select name="modelo">
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="BEVERLY">BEVERLY</option>
+                                        <option value="MP3 300 HPE">MP3 300 HPE</option>
+                                        <option value="MY MOOVER">MY MOOVER</option>
+                                        <option value="Active 1">Active 1</option>
+                                        <option value="MP3 530 SPORT">MP3 530 SPORT</option>
+
+                                    </select>
+                                    <label style="text-align: left;">Ciudad*:</label>
+                                    <select name="ciudad">
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="Barranquilla">LIMA</option>
+                                        <option value="Bogota">CALLAO</option>
+                                    </select>
+                                    <textarea placeholder="Observaciones"></textarea>
+                                    <input type="checkbox" id="terminos" name="terminos" required>
+                                    <label class="wpcf7-list-item-label">Acepta el
+                                        <a href="https://loscoches.com/wp-content/uploads/2019/07/politica-de-proteccion-de-datos-personales-v4.pdf"
+                                            target="_blank" rel="noopener" style="color: #0371AD ;">Tratamiento de Datos y Politica de
+                                            Privacidad.</a></label>
+                                    <br>
+                                    <input type="submit" value="Enviar">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formulario_conten2">
+                        <div class="formulario_conten_parte2">
+                            <h5>DISEÑO</h5>
+                            <h1>EL ELÉCTRICO COMO LO QUIERES</h1>
+                        </div>
+                        <div style="padding-top: 29px;">
+                            Piaggio 1 está disponible en tres versiones que combinan diferentes baterías y motores. El
+                            modelo de serie ofrece una velocidad máxima de 45 km/h y una autonomía que varía entre los
+                            55 km en modo ECO y los 48 km en modo Sport. La versión Piaggio 1+ ofrece una batería más
+                            grande y, por lo tanto, una autonomía de 100 km en modo ECO y 68 km en modo Sport.
+                            Finalmente, el modelo Piaggio 1 Active se distingue por una velocidad máxima de 60 km / h,
+                            una autonomía de 85 km en modo ECO y 66 km en modo Sport.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="descripcion_modelo1_parte1">
+            <div class="contenedor1_modelo1">
+                <div class="imagen_contenedor1_modelo1">
+                    <img src="imagenes/1-Piaggio-One-Active-Piaggio-Colombia.png">
+                </div>
+                <div class="info_contenedor1_modelo1">
+                    <h5>FÁCIL DE USAR EN TODOS LOS SENTIDOS</h5>
+                    <h1>PIAGGIO 1 ACTIVE</h1>
+                </div>
+            </div>
+            <div class="contenedor2_modelo1">
+                <div class="info_contenedor2_modelo1">
+                    <h5>PIAGGIO 1 ACTIVE</h5>
+                    <h1>100% ELECTRIC</h1>
+                    <div class="contenedor_info_contenedor2_modelo1">
+                        Con Piaggio 1, nace una nueva generación de E-Scooters para experimentar la ciudad sin emisiones
+                        y con toda la calidad, tecnología y seguridad que siempre han distinguido a los scooters
+                        Piaggio. El modelo ofrece todo el contenido típico de los scooters premium: diseño atractivo y
+                        atención al detalle, chasis refinado, manejo y una generosa capacidad de carga. Es una forma
+                        nueva y emocionante de marcar la diferencia, es un scooter silencioso pero siempre listo para
+                        que se hable de él, Piaggio 1 es único.
+                    </div>
+                </div>
+                <div class="imagen_contenedor2_modelo1">
+                    <img src="imagenes/100-Porciento-electrico-Piaggio-1-Active-Colombia.png">
+                </div>
+            </div>
+            <div class="contenedor1_modelo1">
+                <div class="imagen_contenedor1_modelo1">
+                    <img src="imagenes/3-Piaggio-One-Active-Piaggio-Colombia.png">
+                </div>
+                <div class="info_contenedor1_modelo1">
+                    <h5>SEGURIDAD</h5>
+                    <h1>MOVERSE NUNCA HABIA SIDO TAN FÁCIL</h1>
+                    <div class="contenedor_info_contenedor1_modelo1">
+                        Piaggio 1 es fácil de usar en todos los sentidos, comenzando por el arranque. Gracias al sistema
+                        sin llave, no necesita la llave tradicional y se puede poner en marcha con el práctico mando a
+                        distancia. Para salir, simplemente presiona el botón MAP en el lado derecho del manillar y
+                        selecciona uno de los dos modos de conducción: ECO o Sport. El modo ECO, orientado al ahorro
+                        energético, ofrece mayor autonomía, velocidad limitada a 30 km / h y una aceleración más
+                        progresiva. El Sport, por otro lado, es el modo de conducción básico, en el que se utiliza toda
+                        la potencia del motor para una experiencia aún más emocionante.
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor2_modelo1">
+                <div class="info_contenedor2_modelo1">
+                    <h5>TECNOLOGÍA</h5>
+                    <h1>LA RECARGA QUE ESTABAS ESPERANDO</h1>
+                    <div class="contenedor_info_contenedor2_modelo1">
+                        La que no te hace esperar Piaggio 1 también facilita las operaciones de recarga. En todas las
+                        versiones la batería es extraíble en segundos y fácilmente transportable para poder recargarla
+                        en casa, en la oficina o en cualquier otro lugar. La versión 1 está equipada con una batería con
+                        una capacidad de 1,4 kWh y un peso de 10 kg, mientras que las versiones 1+ y 1 Active adoptan
+                        una batería de 2,3 kWh, con un peso de 15 kg. Las baterías no requieren mantenimiento ni
+                        precauciones especiales y para recárgalas simplemente utiliza el cargador suministrado con el
+                        vehículo.
+                    </div>
+                </div>
+                <div class="imagen_contenedor2_modelo1">
+                    <img src="imagenes/2-Piaggio-One-Active-Piaggio-Colombia.png">
+                </div>
+            </div>
+            <div class="contenedor1_modelo1">
+                <div class="imagen_contenedor1_modelo1">
+                    <img src="imagenes/Piaggio-1-Active-Piaggio-Colombia.png">
+                </div>
+                <div class="info_contenedor1_modelo1">
+                    <h5>EDICIÓN ESPECIAL</h5>
+                    <h1>PIAGGIO 1 FENG CHEN WANG</h1>
+                    <div class="contenedor_info_contenedor1_modelo1">
+                        Una edición especial que combina la tecnología y la sostenibilidad del Piaggio 1 con el estilo
+                        moderno y multidimensional de Feng Chen Wang. El resultado de esta fusión de excelencia es un
+                        scooter de aspecto experimental, sorprendente e innovador. Un aspecto totalmente único en su
+                        categoría, es una oportunidad sin precedentes para conducir por la ciudad una obra de arte
+                        original libre de emisiones.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content_title_modelos">
+            <div class="title_modelos">
+                <div class="title_modelos_uno">
+                    <span class="title_modelos_1">ENCUENTRA TU ESTILO</span>
+                </div>
+                <div class="title_modelos_dos">
+                    <span class="title_modelos_2">ESPECIFICACIONES TÉCNICAS</span>
+                </div>
+            </div>
+            <div class="boton2_modelos">
+                <button class="boton_modelos_2">Descargar Ficha tecnica</button>
+            </div>
+        </section>
+
+        <section class="video_piaggio_one">
+            <div class="contenedor_video_piaggio_one">
+              <div class="video-container_video_piaggio_one">
+                <iframe src="https://player.vimeo.com/video/866503139?h=bff56c3975" frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </section>
+
+        <section class="datos_mas">
+            <div class="mas_parte1">
+                <div class="mas_info">
+                    <div>
+                        <img decoding="async" width="76" height="76"
+                            src="https://piaggio-colombia.com/wp-content/uploads/2023/06/icono-comodidad-Piaggio-1-Active.jpg">
+                    </div>
+                    <div style="text-align: center;">
+                        <strong style="font-size:25px;">CÓMODO</strong><br><br>
+                        Diseñado para sentirse cómodo y disfrutar cada recorrido del día.
+                    </div>
+                </div>
+                <div class="mas_info">
+                    <div>
+                        <img decoding="async" width="76" height="76"
+                            src="https://piaggio-colombia.com/wp-content/uploads/2023/06/icono-Maniobrable-Piaggio-1-Active.jpg">
+                    </div>
+                    <div style="text-align: center;">
+                        <strong style="font-size: 25px;">MANIOBRABLE</strong><br><br>
+                        Una experiencia de conducción ideal tanto para veteranos como para los menos
+                        experimentados.
+                    </div>
+                </div>
+                <div class="mas_info">
+                    <div>
+                        <img decoding="async" width="76" height="76"
+                            src="https://piaggio-colombia.com/wp-content/uploads/2023/06/icono-Electrico-Piaggio-1-Active.jpg">
+                    </div>
+                    <div style="text-align: center;">
+                        <strong style="font-size: 25px;">ELÉCTRICO</strong><br><br>
+                        Olvídate de las colas para repostar y vive la ciudad de una forma más
+                        dinámica.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="espacio_modelos1"></section>
+        <section class="descripcion_modelo1_parte1">
+            <div class="contenedor2_modelo1">
+                <div class="info_contenedor2_modelo1">
+                    <h5>PIAGGIO 1 ACTIVE</h5>
+                    <h1>EL ELÉCTRICO COMO LO QUIERES</h1>
+                    <div class="contenedor_info_contenedor2_modelo1">
+                        Piaggio 1 está disponible en tres versiones que combinan diferentes baterías y motores. El modelo de serie ofrece una velocidad máxima de 45 km/h y una autonomía que varía entre los 55 km en modo ECO y los 48 km en modo Sport. La versión Piaggio 1+ ofrece una batería más grande y, por lo tanto, una autonomía de 100 km en modo ECO y 68 km en modo Sport. Finalmente, el modelo Piaggio 1 Active se distingue por una velocidad máxima de 60 km / h, una autonomía de 85 km en modo ECO y 66 km en modo Sport.
+                    </div>
+                </div>
+                <div class="imagen_contenedor2_modelo1">
+                    <img src="imagenes/Electrico-como-lo-quieres-Piaggio-Colombia.jpg">
+                </div>
+            </div>
+            <div class="contenedor1_modelo1">
+                <div class="imagen_contenedor1_modelo1">
+                    <img src="imagenes/Piaggio-1-Active-Piaggio-Colombia.png">
+                </div>
+                <div class="info_contenedor1_modelo1">
+                    <h5>MOVILIDAD</h5>
+                    <h1>MOVERSE NUNCA HA SIDO TAN FÁCIL</h1>
+                    <div class="contenedor_info_contenedor1_modelo1">
+                        Piaggio 1 es fácil de usar en todos los sentidos, comenzando por el arranque. Gracias al sistema sin llave, no necesita la llave tradicional y se puede poner en marcha con el práctico mando a distancia. Para salir, simplemente presiona el botón MAP en el lado derecho del manillar y selecciona uno de los dos modos de conducción: ECO o Sport. El modo ECO, orientado al ahorro energético, ofrece mayor autonomía, velocidad limitada a 30 km / hy una aceleración más progresiva. El Sport, por otro lado, es el modo de conducción básico, en el que se utiliza toda la potencia del motor para una experiencia aún más emocionante.
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor2_modelo1">
+                <div class="info_contenedor2_modelo1">
+                    <h5>LA RECARGA QUE ESTABAS ESPERANDO:</h5>
+                    <h1>LA QUE NO TE HACE ESPERAR</h1>
+                    <div class="contenedor_info_contenedor2_modelo1">
+                        Piaggio 1 también facilita las operaciones de recarga. En todas las versiones la batería es extraíble en segundos y fácilmente transportable para poder recargarla en casa, en la oficina o en cualquier otro lugar. La versión 1 está equipada con una batería con una capacidad de 1,4 kWh y un peso de 10 kg, mientras que las versiones 1+ y 1 Active adoptan una batería de 2,3 kWh, con un peso de 15 kg. Las baterías no requieren mantenimiento ni precauciones especiales y para recárgalas simplemente utiliza el cargador suministrado con el vehículo.
+                    </div>
+                </div>
+                <div class="imagen_contenedor2_modelo1">
+                    <img src="imagenes/La-reacarga-que-esperabas-Piaggio-Colombia.jpg">
+                </div>
+            </div>
+            <div class="contenedor1_modelo1">
+                <div class="imagen_contenedor1_modelo1">
+                    <img src="imagenes/Una-revision-silenciosa-Piaggio-1-Active-Piaggio-Colombia.jpg">
+                </div>
+                <div class="info_contenedor1_modelo1">
+                    <h5>NOVEDADES</h5>
+                    <h1>UNA REVOLUCIÓN SILENCIOSA</h1>
+                    <div class="contenedor_info_contenedor1_modelo1">
+                        El scooter funciona con un motor eléctrico desarrollado por Piaggio. Es un tipo de motor integrado en el buje de la rueda trasera que hace que el vehículo sea más delgado y compacto. Las versiones 1 y 1+ están equipadas con un motor eléctrico que entrega una potencia continua de 1,2 kW, mientras que en la versión 1 Active la potencia es de 2 kW. Gracias a la ligereza, la moderna batería de iones de litio y un eficiente sistema de carga en las fases de desaceleración, todas las versiones del Piaggio 1 garantizan una excelente autonomía, con distancias de hasta 100 km en la versión 1+.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="informacion_espec_final">
+            <div class="informacion_espec_final_texto">
+                Fotografías de referencia. Algunos accesorios hacen parte de la ambientación gráfica.<br>
+                *El precio puede estar sujeto a cambios sin previo aviso, consulte a su asesor.
+            </div>
+        </section>
+
+
+        <section class="lineas_azules"></section>
+
+        <section class="footer_piaggio">
+            <div class="footer_column">
+                <div class="logo_footer">
+                    <img src="imagenes/logo.png" alt="">
+                </div>
+                <div class="descripcion_footer">
+                    <span>Diseñamos tecnologías innovadoras, hermosas, <br>eficientes, inteligentes
+                        y sostenibles para reinventar la <br>movilidad para las generaciones futuras. Imaginamos <br>
+                        cómo se moverá
+                        la gente en el futuro, para anticipar sus <br> necesidades y aspiraciones.</span>
+                </div>
+                <div class="redes_footer">
+                    <span class="elementor-grid-item">
+                        <a class="" href="https://www.facebook.com/PiaggioColombiaOfficial" target="_blank">
+                            <img src="imagenes/facebook.png" alt="" style="height: 40px;">
+                        </a>
+                    </span>
+                    <span class="elementor-grid-item">
+                        <a class="" href="https://www.instagram.com/piaggiocolombiaoficial/" target="_blank">
+                            <img src="imagenes/instagram.png" alt="" style="height: 40px;">
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="footer_column">
+                <div class="titulo_footer"><span>NAVEGACIÓN</span></div>
+                <div class="lista_canales">
+                  <span> >> <a href="modelos.html">NUESTROS MODELOS</a></span>
+                  <br><br>
+                  <span> >> <a href="distibuidor.html">ENCUENTRA UN DISTRIBUIDOR</a></span>
+                </div>
+              </div>
+              <div class="footer_column">
+                <div class="titulo_footer"><span>CANALES DE SOPORTE</span></div>
+                <div class="lista_canales">
+                  <span> >> <a href="posventa.html">POSTVENTA</a></span>
+                  <br><br>
+                  <span> >> POLITICA DE PRIVACIDAD</span>
+              </div>
+        </section>
+
+        <section class="lineas_azules"></section>
+
+        <section class="footer_info">
+            <div class="footer_info_img">
+              <a href="https://loscoches.com/" target="_blank">
+                <img width="255" height="45" src="imagenes/Aquasport-logo.png"></a>
+            </div>
+            <div class="footer_info2">
+              <h4 class=""></h4>
+            </div>
+            <div class="footer_info3">
+              <h4 class="">Powered by <a href="https://www.ialab.co/" style="text-decoration: none; color: white;">
+                  ia{Lab}</a></h4>
+            </div>
+          </section>
+    </main>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8ii3nVGcoackbqMsMQ_MLOVVyCdXCzt4&libraries=places&callback=initMap"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

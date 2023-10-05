@@ -1,0 +1,1703 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Roboto+Condensed:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0 0 0 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto Condensed", Sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url(imagenes/Piaggio-Colombia.jpg);
+    background-repeat: no-repeat;
+}
+
+main {
+    height: 100vh;
+    /* Establece la altura de main al 100% del viewport */
+    overflow-y: scroll;
+    /* Permite el desplazamiento vertical en main */
+    /* Puedes personalizar los estilos a tu gusto, como fondo, margen, etc. */
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo_nav {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.logo_nav img {
+    height: 60px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.navigation_nav ul {
+    list-style: none;
+}
+
+#grupo-piaggio a.active::before,
+#grupo-piaggio a.active::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+}
+
+#grupo-piaggio a:focus,
+#grupo-piaggio a:hover {
+    position: relative;
+}
+
+.menu-item>a:focus::before,
+.menu-item>a:hover::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+}
+
+#modelos ul {
+    border: none;
+    /* Elimina la línea */
+}
+
+#modelos ul li a {
+    background-color: blue;
+    /* Cambia el fondo a azul */
+}
+
+.header_nav .navigation_nav ul li {
+    float: left;
+    position: relative;
+}
+
+.header_nav .navigation_nav ul li a {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+}
+
+.header_nav .navigation_nav ul li a:hover {
+    background-color: black;
+}
+
+.header_nav .navigation_nav ul li ul {
+    position: absolute;
+    right: 0;
+    width: 135%;
+    background-color: #00519E;
+    display: none;
+    left: 1px;
+}
+
+.header_nav .navigation_nav ul li ul li a {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.header_nav .navigation_nav ul li ul li ul {
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header_nav .navigation_nav ul li ul li {
+    width: 100%;
+}
+
+.header_nav .navigation_nav ul li:hover>ul {
+    display: initial;
+}
+
+#togle_nav,
+.header_nav label {
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    width: 45px;
+    height: 35;
+}
+
+@media(max-width:950px) {
+    .header_nav label {
+        display: initial;
+    }
+
+    .header_nav {
+        padding: 20px 10%;
+    }
+
+    .header_nav .navigation_nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+    }
+
+    .header_nav .navigation_nav ul li {
+        width: 100%;
+    }
+
+    .header_nav .navigation_nav ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+
+    .header_nav .navigation_nav ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .header_nav .navigation_nav ul li ul li {
+        background-color: black;
+    }
+
+    .header_nav .navigation_nav ul li ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    #togle_nav:checked~.navigation_nav {
+        display: block;
+    }
+}
+
+/*BANNER*/
+.main {
+    background-color: aquamarine;
+}
+
+.banner {
+    height: 694px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_uno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_1 {
+    color: #8B8B8B;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.encabezado_dos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_2 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 65px;
+    text-align: center;
+}
+
+.content_banner {
+    color: azure;
+}
+
+.content_banner1 {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 700px;
+        /* Ajustar la altura automáticamente */
+    }
+
+    .encabezado_uno {
+        text-align: center;
+    }
+
+    .encabezado_2 {
+        font-size: 40px;
+        /* Reducir el tamaño del texto para dispositivos móviles */
+    }
+
+    .content_banner1 {
+        width: 90%;
+        /* Usar el ancho completo en dispositivos móviles */
+    }
+}
+
+/*contenedor titulos modelos*/
+.content_title_modelos {
+    height: 187px;
+    background-color: white;
+}
+
+.title_modelos {
+    padding: 35px;
+}
+
+.title_modelos_uno {
+    display: flex;
+    justify-content: center;
+}
+
+.title_modelos_1 {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #000;
+    top: 10px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+.title_modelos_dos {
+    display: flex;
+    justify-content: center;
+}
+
+.title_modelos_2 {
+    color: #0371AD;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 54px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+}
+
+#espacios_mobil {
+    display: none;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .content_title_modelos {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 300px;
+    }
+
+    .title_modelos {
+        margin-bottom: 20px;
+        /* Espacio entre los elementos del título y el botón */
+    }
+
+    .boton_modelos {
+        margin-top: 20px;
+        /* Espacio superior para separar el botón */
+    }
+
+    #espacios_mobil {
+        display: inherit;
+    }
+}
+
+
+/*boton modelos*/
+
+.boton_modelos {
+    display: flex;
+    justify-content: center;
+}
+
+.boton_modelos_1 {
+    width: 300px;
+    padding: 2px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border: 4px solid #0371AD;
+    background-color: #0371AD;
+    color: #fafafa;
+    transition: .4s;
+}
+
+.boton_modelos_1:hover {
+    background-color: #0371AD;
+    border: 4px solid #0371AD;
+    color: #fafafa;
+    transform: skew(-20deg);
+}
+
+/* contenedor modelos */
+.content_modelos {
+    background-color: white;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.content_modelos_list {
+    width: 97%;
+}
+
+.modelos_list {
+    display: flex;
+    overflow: auto;
+    gap: 2%;
+
+}
+
+.modelos_list img {
+    max-width: 100%;
+    height: auto;
+}
+
+.modelo_img {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modelo_title {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    background-color: #0371AD;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .modelos_list {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modelo_uno,
+    .modelo_dos,
+    .modelo_tres,
+    .modelo_cuatro,
+    .modelo_cinco {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .modelo_img {
+        padding-top: 0;
+        /* Eliminar el espacio superior en las imágenes */
+    }
+}
+
+
+/*lines y espacio*/
+.espacio_modelos {
+    height: 187px;
+    background-color: white;
+}
+
+.lineas_azules {
+    height: 5px;
+    background-color: #0371AD;
+}
+
+/*fotter*/
+.footer_piaggio {
+    height: 435px;
+    background-color: #000;
+    /*background-image: url(imagenes/fonfo_footer.jpg);*/
+    background-position: center center;
+    background-repeat: repeat-x;
+    background-size: 58% auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer_column {
+    width: 30%;
+    height: 435px;
+}
+
+.titulo_footer {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    color: #4997C2;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.logo_footer {
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.logo_footer img {
+    max-height: 75px;
+    margin-top: 25px;
+}
+
+.descripcion_footer {
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.descripcion_footer span {
+    color: #FFFFFFC9;
+    font-family: "Roboto Condensed", Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+
+.lista_canales span {
+    color: #FFFFFFC9;
+}
+
+.redes_footer {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+
+.footer_info {
+    height: 56px;
+    display: flex;
+    width: 100%;
+    background-color: #000;
+}
+
+.footer_info_img {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.footer_info2 {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.footer_info3 {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.footer_piaggio a {
+    text-decoration: none;
+    color: #FFFFFFC9;
+}
+
+.footer_piaggio a:hover {
+    text-decoration: none;
+    color: #00519E;
+}
+
+.espacios_mobil2 {
+    display: inherit;
+}
+
+/* Estilos generales para dispositivos móviles */
+@media (max-width: 767px) {
+    .footer_piaggio {
+        flex-direction: column;
+        align-items: center;
+        height: 550px;
+    }
+
+    .footer_column {
+        width: 80%;
+        text-align: center;
+        height: auto;
+    }
+
+    .descripcion_footer {
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .footer_info {
+        height: 150px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo_footer {
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .logo_footer img {
+        max-height: 50px;
+    }
+
+    .descripcion_footer span {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .redes_footer {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .lista_canales span {
+        display: block;
+        text-align: initial;
+    }
+
+    .footer_info_img img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .footer_info2,
+    .footer_info3 {
+        text-align: center;
+    }
+
+    .espacios_mobil2 {
+        display: none;
+    }
+
+    .footer_info_img,
+    .footer_info2,
+    .footer_info3 {
+        width: auto;
+    }
+}
+
+
+
+
+/*pagina de distribuidor*/
+/*distrbuidor*/
+.banner_distribuidor {
+    height: 400px;
+    background-image: url(imagenes/hero_img_access_page_2840a-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_distribuidor_uno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_distribuidor_1 {
+    color: #8B8B8B;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.encabezado_distribuidor_dos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_distribuidor_2 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 65px;
+    text-align: center;
+}
+
+/*mapa*/
+.conten_mapa {
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.buscador_mapa {
+    height: 800px;
+}
+
+.conten_mapa {
+    background-color: white;
+}
+
+#location-input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#map {
+    width: 60%;
+    height: 800px;
+}
+
+/*pagina de postventa*/
+/*posventa*/
+.postventa {
+    height: auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.conten_postventa {
+    display: flex;
+}
+
+.posventa_enca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.enca_post {
+    width: 80%;
+}
+
+.post_elementos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 92%;
+}
+
+.post_elemento1 {
+    width: 40%;
+    border: solid 1px black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.post_elemento_logo {
+    background-color: #FFF;
+}
+
+.post_elemento_lista ul {
+    list-style: none;
+}
+
+.pasventa_imagen img {
+    height: 300px;
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .conten_postventa {
+        flex-direction: column;
+        /* Coloca los elementos en una sola columna en la vista móvil */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+    }
+
+    .post_elemento1 {
+        width: 98%;
+        /* Ajusta el ancho de las columnas en la vista móvil */
+        margin-bottom: 20px;
+        /* Agrega espacio entre las columnas en la vista móvil */
+    }
+
+    .post_elementos {
+        flex-direction: column;
+    }
+
+    .pasventa_imagen {
+        display: none;
+        /* Agrega espacio entre la imagen y las columnas en la vista móvil */
+    }
+}
+
+
+/*pagina de modelo*/
+/*modelos*/
+
+.modelo_encabezado {
+    background-image: url(imagenes/banner-producto.png);
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.cabecera_modelo {
+    position: relative;
+    left: 180px;
+}
+
+.modelo_encabezado h5 {
+    color: #8B8B8B;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.modelo_encabezado h1 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.modelo_encabezado h2 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .modelo_encabezado {
+        background-size: cover;
+        /* Ajusta el tamaño de fondo para cubrir todo el contenedor */
+        height: auto;
+        /* Ajusta la altura automáticamente según el contenido */
+        padding: 20px;
+        /* Agrega espacio alrededor del contenido */
+        text-align: center;
+        /* Centra el contenido en pantallas más pequeñas */
+        height: 400px;
+    }
+
+    .cabecera_modelo {
+        /* Restaura la posición original */
+        left: auto;
+        top: 35px;
+        /* Restaura la posición original */
+    }
+
+    .modelo_iamagenes {
+        height: auto;
+        /* Ajusta la altura automáticamente según el contenido */
+    }
+
+    .modelo_iamagenes img {
+        max-width: 100%;
+        /* Asegura que la imagen no se desborde del contenedor */
+        height: auto;
+        /* Ajusta la altura automáticamente según el ancho */
+        position: static;
+        /* Restaura la posición original */
+        top: auto;
+        /* Restaura la posición original */
+    }
+}
+/*colores motos*/
+.modelo_imagenes {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.modelo_imagenes img {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.colores {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.color-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    background-color: inherit;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid black 1px;
+}
+
+.color-info {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.color-name {
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+    /* Cambia el color del precio si es necesario */
+}
+
+.azul .circle {
+    background-color: rgb(0, 75, 98); /* Establece el color de fondo del círculo */
+    border: solid 0.5px;
+}
+
+.blanco .circle {
+    background-color: rgb(255, 255, 255); /* Establece el color de fondo del círculo */
+    border: solid 0.5px;
+
+}
+
+.gris .circle {
+    background-color: rgb(179, 172, 158); /* Establece el color de fondo del círculo */
+    border: solid 0.5px;
+
+}
+
+.negro .circle {
+    background-color: rgb(29, 29, 27); /* Establece el color de fondo del círculo */
+    border: solid 0.5px;
+}
+
+.naranja .circle {
+    background-color: rgb(199, 76, 47); /* Establece el color de fondo del círculo */
+    border: solid 0.5px;
+
+}
+
+.plomo .circle {
+    background-color: rgb(37, 37, 36); /* Establece el color de fondo del círculo */
+    border: solid 0.5px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .modelo_imagenes {
+        height: auto;
+    }
+    .modelo_imagenes img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/*conten formulario*/
+.modelo_formulario {
+    background-color: #000000d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+}
+
+.modelo_formulario_contenedor {
+    width: 80%;
+}
+
+.contennn_for {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.formulario_conten1 {
+    width: 50%;
+}
+
+.formulario_conten_parte1 {
+    text-align: center;
+    color: white;
+}
+
+.formulario_conten_parte1 h1 {
+    text-align: center;
+    color: #0371AD;
+}
+
+.formulario_conten_parte1 {
+    padding: 10px;
+}
+
+.formulario_conten2 {
+    width: 50%;
+    color: white;
+    padding-top: 29px;
+}
+
+.formulario_conten_parte2 h1 {
+    font-size: 40px;
+    color: #0371AD;
+}
+
+
+/*formulario*/
+.container_form {
+    background-color: white;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.modelo_formulario form {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modelo_formulario input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modelo_formulario label {
+    text-align: center;
+    display: block;
+}
+
+.modelo_formulario .checkbox-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modelo_formulario input[type="checkbox"] {
+    margin: 5px;
+}
+
+.modelo_formulario input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modelo_formulario input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.formulario_conten2 {
+    width: 50%;
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .modelo_formulario_contenedor {
+        flex-direction: column;
+        /* Coloca los elementos en una sola columna */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+    }
+
+    .modelo_formulario {
+        height: 1200px;
+    }
+
+    .contennn_for {
+        flex-direction: column;
+        /* Coloca los elementos en una sola columna */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+    }
+
+    .formulario_conten1,
+    .formulario_conten2 {
+        width: 100%;
+        /* Ocupa todo el ancho disponible en la vista móvil */
+    }
+
+    .formulario_data {
+        text-align: center;
+        /* Centra el formulario horizontalmente en la vista móvil */
+    }
+
+    .formulario_conten_parte2 {
+        padding-top: 10px;
+        /* Ajusta el espacio en la parte superior */
+    }
+}
+
+
+
+/*descripcion de modelo*/
+.descripcion_modelo1_parte1 {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*infor parte 1*/
+.contenedor1_modelo1 {
+    width: 80%;
+    display: flex;
+}
+
+.imagen_contenedor1_modelo1 {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.info_contenedor1_modelo1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 50px;
+}
+
+.info_contenedor1_modelo1 h5 {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #000;
+    top: 10px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+.info_contenedor1_modelo1 h1 {
+    color: #0371AD;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 54px;
+}
+
+.contenedor_info_contenedor1_modelo1 {
+    color: #303030;
+    font-family: "Roboto Condensed", Sans-serif;
+    font-weight: 400;
+    line-height: 1.4em;
+    padding-top: 15px;
+    width: 80%;
+}
+
+/*infor parte 2*/
+.contenedor2_modelo1 {
+    width: 80%;
+    display: flex;
+}
+
+.imagen_contenedor2_modelo1 {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.info_contenedor2_modelo1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 50px;
+    background-color: #0371AD;
+}
+
+.info_contenedor2_modelo1 h5 {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: white;
+    top: 10px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+.info_contenedor2_modelo1 h1 {
+    color: white;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 54px;
+}
+
+.contenedor_info_contenedor2_modelo1 {
+    color: white;
+    font-family: "Roboto Condensed", Sans-serif;
+    font-weight: 400;
+    line-height: 1.4em;
+    padding-top: 15px;
+    width: 80%;
+}
+
+/*boton modelos*/
+
+.boton2_modelos {
+    display: flex;
+    justify-content: center;
+}
+
+.boton_modelos_2 {
+    width: 300px;
+    padding: 2px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border: 4px solid #000;
+    background-color: #000;
+    color: #fafafa;
+    transition: .4s;
+}
+
+.boton_modelos_2:hover {
+    background-color: #000;
+    border: 4px solid #000;
+    color: #fafafa;
+    transform: skew(-20deg);
+}
+
+/**/
+.contenedor_especificaciones {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_especificaciones img {
+    height: 80px;
+}
+
+.especificaciones_colum1 .info {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #000;
+    bottom: 0px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+/*especificacione*/
+.conten_colum {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    /* Espaciado entre las columnas */
+}
+
+.especificaciones_colum1 {
+    width: 48%;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.imagen_colum {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.column_descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.column_descripcion h2 {
+    color: #0371AD;
+    text-align: left;
+}
+
+.column_descripcion span {
+    text-align: left;
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .conten_colum {
+        flex-direction: column;
+        /* Coloca las columnas en una sola columna en la vista móvil */
+        align-items: center;
+        /* Centra las columnas horizontalmente */
+    }
+
+    .especificaciones_colum1 {
+        width: 100%;
+        /* Ocupa todo el ancho disponible en la vista móvil */
+        margin-bottom: 20px;
+        /* Agrega espacio entre las columnas en la vista móvil */
+    }
+
+    .column_descripcion {
+        border-bottom: none;
+        /* Elimina el borde inferior en la vista móvil */
+        padding-top: 10px;
+        /* Ajusta el espacio superior en la vista móvil */
+        padding-bottom: 10px;
+        /* Ajusta el espacio inferior en la vista móvil */
+    }
+
+    .descripcion_modelo1_parte1 img {
+        height: 300px;
+    }
+}
+
+
+.info {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #000;
+    bottom: 0px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+.informacion_espec_final {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.informacion_espec_final_texto {
+    margin: 90px 0 90px 0;
+    text-align: center;
+    font-family: "Roboto", Sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/*pagina de todos los modelos*/
+.todos_los_modelos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.contenedor_todos_los_modelos {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conten_todos_los_modelos {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.imagen_todos_los_modelos {
+    background-color: #0056b3;
+    width: 100%;
+}
+
+.info_todos_los_modelos {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 25px;
+}
+
+.info_todos_los_modelos h2 {
+    color: #0371AD;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: .9em;
+}
+
+.boton_modelos_3 {
+    width: 180px;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border: 4px solid #0371AD;
+    background-color: #0371AD;
+    color: #fafafa;
+    transition: .4s;
+}
+
+.imagen_todos_los_modelos2 {
+    background-color: #333;
+    width: 100%;
+}
+
+.modelo_encabezado_mo {
+    background-image: url(imagenes/banner-producto.png);
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.cabecera_modelo_mo {
+    position: relative;
+    left: 130px;
+}
+
+.modelo_encabezado_mo h5 {
+    color: #8B8B8B;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.modelo_encabezado_mo h1 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.modelo_encabezado_mo h2 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+/*video de modelo*/
+.video_piaggio_one {
+    background-color: #FFF;
+    width: 100%;
+    padding: 50px;
+}
+
+.contenedor_video_piaggio_one {
+    text-align: center;
+}
+
+.container_video_piaggio_one {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Proporción de aspecto 16:9 para videos de YouTube, puedes ajustarla según el tipo de video */
+    height: 0;
+    overflow: hidden;
+}
+
+.container_video_piaggio_one iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.datos_mas {
+    background-color: #FFF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mas_parte1 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.mas_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.espacio_modelos1 {
+    height: 100px;
+    background-color: white;
+}
+
+
+/*responsivo m1*/
+/* Para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+
+    /* Cambia el ancho de los contenedores principales */
+    .contenedor1_modelo1,
+    .contenedor2_modelo1 {
+        width: 100%;
+        flex-direction: column;
+        /* Coloca los elementos en una sola columna */
+    }
+
+    /* Ajusta el ancho de las imágenes */
+    .imagen_contenedor1_modelo1,
+    .imagen_contenedor2_modelo1 {
+        height: auto;
+        /* Haz que las imágenes se ajusten automáticamente a su contenido */
+    }
+
+    /* Elimina el padding izquierdo en dispositivos móviles */
+    .info_contenedor1_modelo1,
+    .info_contenedor2_modelo1 {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .mas_parte1 {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .banner_distribuidor {
+        height: 380px;
+        background-image: url(imagenes/hero_img_access_page_2840a-scaled.jpg);
+        background-size: center center;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .encabezado_distribuidor_uno,
+    .encabezado_distribuidor_dos {
+        text-align: center;
+        /* Centra el texto en la vista móvil */
+    }
+
+    .encabezado_distribuidor_1,
+    .encabezado_distribuidor_2 {
+        font-size: 24px;
+        /* Reduce el tamaño de fuente en la vista móvil */
+    }
+
+    .todos_los_modelos,
+    .contenedor_todos_los_modelos,
+    .conten_todos_los_modelos {
+        flex-direction: column;
+    }
+
+    .imagen_todos_los_modelos img {
+        height: 250px;
+        
+    }
+    .imagen_todos_los_modelos2 img{
+        height: 240px;
+    }
+    .cabecera_modelo_mo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+    }
+    .modelo_encabezado_mo{
+        margin-top: 50px;
+    }
+}
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:100px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:5px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp1{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+    background:#0371AD;
+    color:#FFF;
+    border-radius:5px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+
+/*custom_new*/
+.custom_new-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #FFF;
+}
+
+.custom_new-menu {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.custom_new-item {
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.custom_new-item i {
+    font-size: 24px;
+}
+
+.custom_new-content {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.custom_new-info {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.custom_new-image {
+    flex: 1;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.custom_new-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .custom_new-content {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .custom_new-menu {
+        flex-direction: column;
+    }
+
+    .custom_new-item {
+        flex: 1;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
