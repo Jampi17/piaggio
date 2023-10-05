@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Formulario Modal</title>
+    <style>
+        /* Estilos generales */
+        .modal {
+            background-color: #000000d8;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            /* Cambia la altura para cubrir toda la ventana */
+            position: fixed;
+            /* Asegura que el modal se superponga a todo el contenido */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .modal input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal label {
+            text-align: center;
+            display: block;
+        }
+
+        .modal .checkbox-container {
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .modal input[type="checkbox"] {
+            margin: 5px;
+        }
+
+        .modal input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .modal input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .formulario_conten2 {
+            width: 50%;
+        }
+
+
+        .container_form {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/fd6428d3fa.js" crossorigin="anonymous"></script>
+    <a href="#" class="btn-wsp1" id="openModal">
+        <i class="fa-solid fa-motorcycle"></i>
+    </a>
+    <div id="confirmationMessage" style="display: none;">
+        <p>¡Formulario enviado con éxito!</p>
+    </div>
+
+
+    <div id="myModal" class="modal">
+        <button id="closeModal" class="close" title="Cerrar">&times;</button>
+        <div class="modelo_formulario_contenedor">
+            <div class="contennn_for">
+                <div class="formulario_conten1">
+                    <div class="formulario_data">
+                        <div class="container_form">
+                            <form>
+                                <input type="text" placeholder="Nombres y Apellidos" required>
+                                <input type="email" placeholder="Correo Electrónico" required>
+                                <input type="tel" placeholder="Celular" required>
+                                <label>¿Cómo deseas ser contactado?*</label>
+                                <br>
+                                <div class="checkbox-container">
+                                    <div><label for="telefono">Teléfono</label>
+                                        <input type="checkbox" id="telefono" name="contacto" value="telefono">
+                                    </div>
+                                    <div>
+                                        <label for="whatsapp">WhatsApp</label>
+                                        <input type="checkbox" id="whatsapp" name="contacto" value="whatsapp">
+                                    </div>
+                                </div>
+                                <label style="text-align: left;">Modelo Piaggio*:</label>
+                                <select name="modelo">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="BEVERLY">BEVERLY</option>
+                                    <option value="MP3 300 HPE">MP3 300 HPE</option>
+                                    <option value="MY MOOVER">MY MOOVER</option>
+                                    <option value="Active 1">Active 1</option>
+                                    <option value="MP3 530 SPORT">MP3 530 SPORT</option>
+
+                                </select>
+                                <label style="text-align: left;">Ciudad*:</label>
+                                <select name="ciudad">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="Barranquilla">LIMA</option>
+                                    <option value="Bogota">CALLAO</option>
+                                </select>
+                                <textarea placeholder="Observaciones"></textarea>
+                                <input type="checkbox" id="terminos" name="terminos" required>
+                                <label class="wpcf7-list-item-label">Acepta el
+                                    <a href="https://loscoches.com/wp-content/uploads/2019/07/politica-de-proteccion-de-datos-personales-v4.pdf"
+                                        target="_blank" rel="noopener" style="color: #0371AD ;">Tratamiento de Datos
+                                        y Politica de
+                                        Privacidad.</a></label>
+                                <br>
+                                <input type="submit" value="Enviar">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const openModalButton = document.getElementById("openModal");
+            const closeModalButton = document.getElementById("closeModal");
+            const modal = document.getElementById("myModal");
+            const confirmationMessage = document.getElementById("confirmationMessage");
+            const form = document.querySelector("form");
+
+            openModalButton.addEventListener("click", function () {
+                modal.style.display = "block";
+            });
+
+            closeModalButton.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+
+            // Cierra el modal si el usuario hace clic fuera de él
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            // Manejar el envío del formulario
+            // Manejar el envío del formulario
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+                // Simular el envío del formulario (aquí puedes agregar tu lógica real de envío)
+                // Mostrar el mensaje de confirmación
+                confirmationMessage.style.display = "block";
+                modal.style.display = "none";
+
+                // Ocultar el mensaje después de 5 segundos
+                setTimeout(function () {
+                    confirmationMessage.style.display = "none";
+                }, 5000); // 5000 milisegundos (5 segundos)
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

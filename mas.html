@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <style>
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            z-index: 1;
+        }
+
+        .div2 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: relative;
+            z-index: 2;
+            top: -100px;
+            /* La mitad de la altura de div2 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">Div 1</div>
+    <div class="div2">Div 2</div>
+</body>
+
+</html>

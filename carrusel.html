@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos básicos del carrusel */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilos de las miniaturas */
+        .carousel-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .thumbnail {
+            cursor: pointer;
+            position: relative;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .thumbnail:hover {
+            opacity: 1;
+        }
+
+        /* Estilos de los botones de control */
+        .prev-button,
+        .next-button {
+            display: block;
+            margin: 10px auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img class="carousel-slide" src="imagenes/m2-01.jpg" alt="Imagen 1">
+            <img class="carousel-slide" src="imagenes/m2-02.jpg" alt="Imagen 2">
+            <img class="carousel-slide" src="imagenes/m2-03.jpg" alt="Imagen 3">
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+        <div class="carousel-thumbnails">
+            <div class="thumbnail" data-slide-index="0"><img src="imagenes/m2-01.jpg" alt="Thumbnail 1"></div>
+            <div class="thumbnail" data-slide-index="1"><img src="imagenes/m2-02.jpg" alt="Thumbnail 2"></div>
+            <div class="thumbnail" data-slide-index="2"><img src="imagenes/m2-03.jpg" alt="Thumbnail 3"></div>
+            <!-- Agrega más miniaturas según sea necesario -->
+        </div>
+    </div>
+    <button class="prev-button">Anterior</button>
+    <button class="next-button">Siguiente</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousel = document.querySelector(".carousel");
+            const thumbnails = document.querySelectorAll(".thumbnail");
+            const prevButton = document.querySelector(".prev-button");
+            const nextButton = document.querySelector(".next-button");
+
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const translateX = currentIndex * -100 + "%";
+                carousel.style.transform = `translateX(${translateX})`;
+                thumbnails.forEach((thumbnail, index) => {
+                    if (index === currentIndex) {
+                        thumbnail.style.opacity = 1;
+                    } else {
+                        thumbnail.style.opacity = 0.7;
+                    }
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                updateCarousel();
+            }
+
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.addEventListener("click", () => {
+                    goToSlide(index);
+                });
+            });
+
+            prevButton.addEventListener("click", () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = thumbnails.length - 1;
+                }
+                updateCarousel();
+            });
+
+            nextButton.addEventListener("click", () => {
+                if (currentIndex < thumbnails.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

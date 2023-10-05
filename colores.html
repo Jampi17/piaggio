@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modelo_imagenes {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .modelo_imagenes img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .colores {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .color {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .color-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .circle {
+            background-color: inherit;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .color-info {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .color-name {
+            font-weight: bold;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #333;
+            /* Cambia el color del precio si es necesario */
+        }
+
+        .azul .circle {
+            background-color: rgb(0, 75, 98);; /* Establece el color de fondo del círculo */
+        }
+
+        .blanco .circle {
+            background-color: rgb(255, 255, 255);; /* Establece el color de fondo del círculo */
+        }
+
+        .gris .circle {
+            background-color: rgb(179, 172, 158);; /* Establece el color de fondo del círculo */
+        }
+
+        @media screen and (max-width: 768px) {
+            .modelo_imagenes {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="modelo_imagenes">
+        <div>
+            <img src="imagenes/1_BEBERLY 400/Beverly400_1.png" alt="">
+        </div>
+        <div class="colores">
+            <div class="color azul" data-image-src="imagenes/1_BEBERLY 400/Beverly400_1.png">
+                <div class="color-container">
+                    <div class="circle"></div>
+                    <div class="color-info">
+                        <div class="color-name">AZUL</div>
+                        <div class="price">$11.550.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="color blanco" data-image-src="imagenes/1_BEBERLY 400/Beverly400_2.png">
+                <div class="color-container">
+                    <div class="circle"></div>
+                    <div class="color-info">
+                        <div class="color-name">BLANCO</div>
+                        <div class="price">$11.550.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="color gris" data-image-src="imagenes/1_BEBERLY 400/Beverly400_3.png">
+                <div class="color-container">
+                    <div class="circle"></div>
+                    <div class="color-info">
+                        <div class="color-name">GRIS</div>
+                        <div class="price">$11.550.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const colores = document.querySelectorAll('.color');
+        const imagen = document.querySelector('.modelo_imagenes img');
+
+        colores.forEach(color => {
+            color.addEventListener('click', () => {
+                const imagenSrc = color.getAttribute('data-image-src');
+                imagen.src = imagenSrc;
+            });
+        });
+    </script>
+</body>
+</html>
